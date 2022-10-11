@@ -8,7 +8,10 @@
     color: #363537;
   }
 
-  
+.headshot {
+  border-radius: 50%;
+}
+
 .heading {
 
     font-family: bebas-neue, sans-serif;
@@ -38,4 +41,6 @@ font-family: bebas-neue, sans-serif;
     background-color: #F9C48A
   }
   
-  
+  section {
+    margin-bottom: 65px;
+  }

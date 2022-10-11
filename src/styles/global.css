@@ -2,4 +2,8 @@ html {
     background-color: rgb(152, 83, 22);
   }
   
-  
+.headshot {
+  border-radius: 50%;
+  max-width: 20vw;
+  margin-bottom: 40px;
+}
