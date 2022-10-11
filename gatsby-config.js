@@ -10,5 +10,6 @@ module.exports = {
       "path": "./src/images/"
     },
     __key: "images"
-  }]
+  }
+]
 };
