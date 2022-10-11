@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `minimal-portfolio`,
-    siteUrl: `https://www.yourdomain.tld`
+    title: `Max Kuhn`,
+    siteUrl: `http://www.maxkuhn.ca`
   },
   plugins: ["gatsby-plugin-styled-components", "gatsby-plugin-image", "gatsby-plugin-sharp", "gatsby-transformer-sharp", {
     resolve: 'gatsby-source-filesystem',
