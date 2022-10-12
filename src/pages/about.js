@@ -4,6 +4,7 @@ import Layout from '../components/layout';
 const AboutPage = () => {
     return (
         <Layout pageTitle="About">
+            <section>
             <p aria-hidden="true">🎸🌈💻🧙‍♂️📚🎮🎧</p>
             <p>I'm originally from the Bay Area, but I moved to Vancouver to go to UBC where I studied English, art, and film while volunteering for CiTR 101.9FM campus/community radio. Now I live with my partner and our dog in Victoria, which is the traditional, unceded territory of the Lekwungen (Esquimalt and Songhees) people. 
             </p>
@@ -29,6 +30,7 @@ const AboutPage = () => {
                 <li>Drag (especially local performers!)</li>
                 <li>Painting little plastic elves</li>
             </ul>
+            </section>
 
         </Layout>
     )

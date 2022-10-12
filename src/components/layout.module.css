@@ -1,11 +1,26 @@
 @import url("https://use.typekit.net/izl4igd.css");
 
+
+
 .container {
     margin: auto;
     margin-top: 12vh;
+    margin-bottom: 15vh;
     max-width: 60vw;
     font-family: mokoko, serif;
     color: #363537;
+  }
+
+  @media only screen and (max-width: 800px) {
+    .container {
+      max-width: 85vw;
+    }
+  }
+
+  @media only screen and (min-width: 800px) {
+    .container {
+      max-width: 45vw;
+    }
   }
 
 .headshot {
@@ -21,6 +36,7 @@
 h3 {
   font-family: bebas-neue, sans-serif;
   font-size: 2rem;
+  margin-bottom:0;
 }
   .nav-links {
     display: flex;
@@ -43,4 +59,15 @@ font-family: bebas-neue, sans-serif;
   
   section {
     margin-bottom: 65px;
+  }
+
+  section p {
+    line-height: 1.75;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+  }
+
+  section p:first-of-type {
+
+    margin-top: 1rem;
   }
