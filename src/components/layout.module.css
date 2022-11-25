@@ -35,7 +35,7 @@
 
 h3 {
   font-family: bebas-neue, sans-serif;
-  font-size: 2rem;
+  font-size: 3rem;
   margin-bottom:0;
 }
   .nav-links {
@@ -47,7 +47,7 @@ font-family: bebas-neue, sans-serif;
 
   }
   .nav-link-item {
-    padding-right: 3rem;
+    padding-right: 3.5rem;
   }
   .nav-link-text {
     color: #363537;
