@@ -26,7 +26,7 @@ const Portfolio = () => {
             </section>
 
             <section>
-            <h3>Brendan Boyd (WIP)</h3>
+            <h3>Brendan Boyd Puppetry (WIP)</h3>
                 <p><i>Brendan Boyd is an amazing puppet-maker and puppeteer who you can see on Apple TV's </i>Fraggle Rock<i> reboot. He's also working with me on his new website! Here's a  peek at our design process.</i></p>
                 <StaticImage width="600" alt="Brendan Boyd, a handsome smiling young man with stubble wearing a knitted jacket, holds a grotesque but adorable puppet he made" src="https://github.com/maxwellsquared/minimal-portfolio/blob/main/img/bjb1.jpg?raw=true"/>
                 <p>Brendan builds and operates amazing puppets--and designs some of the spookiest, most incredible haunted houses you'll ever see. We've been friends for years and I've created music for several of his productions, so when I realized he didn't currently have a website I just had to put something great together for this awesome human.</p>
