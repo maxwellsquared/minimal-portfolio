@@ -4,7 +4,7 @@ import { StaticImage } from "gatsby-plugin-image";
 
 const Game = () => {
     return (
-        <Layout pageTitle="Building a Game">
+        <Layout pageTitle="Dev Log">
             <section>
                 <p>
                     Over the past year, I've fallen in love with a new kind of
@@ -23,6 +23,7 @@ const Game = () => {
                     it makes you think, “Hey, I could do this,” so I did.
                 </p>
                 <StaticImage
+                    layout="constrained"
                     width="600"
                     alt="Video game where a ship flies around a planet and shoots glowing targets."
                     src="https://github.com/maxwellsquared/minimal-portfolio/blob/main/img/Gameplay-2.png?raw=true"
@@ -101,6 +102,7 @@ const Game = () => {
                     and camera pointing the right way:
                 </p>
                 <StaticImage
+                    layout="constrained"
                     width="600"
                     alt="Game interface on a track with a camera and a rocket ship"
                     src="https://github.com/maxwellsquared/minimal-portfolio/blob/main/img/track-movement.png?raw=true"
@@ -125,6 +127,7 @@ const Game = () => {
                 </p>
 
                 <StaticImage
+                    layout="constrained"
                     width="600"
                     alt="Unity interface showing a track and terrain"
                     src="https://github.com/maxwellsquared/minimal-portfolio/blob/main/img/track-movement-2.png?raw=true"
@@ -243,6 +246,7 @@ const Game = () => {
                 </p>
 
                 <StaticImage
+                    layout="constrained"
                     width="600"
                     alt="a cool spaceship from the back"
                     src="https://github.com/maxwellsquared/minimal-portfolio/blob/main/img/spaceship_beauty_back.png?raw=true"
@@ -254,6 +258,7 @@ const Game = () => {
                     of the sharp body lines on modern cars:
                 </p>
                 <StaticImage
+                    layout="constrained"
                     width="600"
                     alt="a cool spaceship from the front"
                     src="https://github.com/maxwellsquared/minimal-portfolio/blob/main/img/spaceship_beauty_side.png?raw=true"
@@ -346,6 +351,7 @@ const Game = () => {
                     direction:
                 </p>
                 <StaticImage
+                    layout="constrained"
                     width="600"
                     alt="diagram of two spaceships on a track, pointed at each other"
                     src="https://github.com/maxwellsquared/minimal-portfolio/blob/main/img/track_movement_3.png?raw=true"
@@ -579,11 +585,14 @@ const Game = () => {
                     more ships I made in Blender: a small fighter craft which
                     will be an enemy in future, and a massive capital ship. It
                     adds some much-needed depth to the scene:
-                    <StaticImage
-                        width="600"
-                        alt="lots of spaceships flying around with a big one in the distance"
-                        src="https://github.com/maxwellsquared/minimal-portfolio/blob/main/img/Gameplay-4.png?raw=true"
-                    />
+                </p>
+                <StaticImage
+                    layout="constrained"
+                    width="600"
+                    alt="lots of spaceships flying around with a big one in the distance"
+                    src="https://github.com/maxwellsquared/minimal-portfolio/blob/main/img/Gameplay-4.png?raw=true"
+                />
+                <p>
                     The fighters operate in small swarms, and I used the
                     transform.LookAt function to rotate them at a target
                     slightly ahead of them on the track, which makes them swoop

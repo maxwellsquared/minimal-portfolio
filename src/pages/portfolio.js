@@ -18,6 +18,7 @@ const Portfolio = () => {
                     </i>
                 </p>
                 <StaticImage
+                    layout="constrained"
                     width="600"
                     alt="Google Doc interface showing an AI score"
                     src="https://github.com/maxwellsquared/minimal-portfolio/blob/main/img/pai1.jpg?raw=true"
@@ -28,6 +29,7 @@ const Portfolio = () => {
                     extension feature my work.
                 </p>
                 <StaticImage
+                    layout="constrained"
                     width="600"
                     alt="Website showing Help section with search and YouTube instructional videos"
                     src="https://github.com/maxwellsquared/minimal-portfolio/blob/main/img/pai2.jpg?raw=true"
@@ -46,9 +48,15 @@ const Portfolio = () => {
                 <h3>Celestial Weasel Squadron (Unity)</h3>
                 <p>
                     I wanted to get better at Unity and C#, so I built this rail
-                    shooter. It's not quite finished, but it works!
+                    shooter. It's not quite finished, but it works!{" "}
+                    <a href="https://maxwellsquared.itch.io/celestial-weasel-squadron">
+                        Here's a prototype you can play in your browser. Mouse
+                        movement is currently disabled, so be sure to plug in an
+                        Xbox controller.
+                    </a>
                 </p>
                 <StaticImage
+                    layout="constrained"
                     width="600"
                     alt="Unity interface showing a track and terrain"
                     src="https://github.com/maxwellsquared/minimal-portfolio/blob/main/img/track-movement-2.png?raw=true"
@@ -60,6 +68,7 @@ const Portfolio = () => {
                 </p>
 
                 <StaticImage
+                    layout="constrained"
                     width="600"
                     alt="a cool spaceship from the back"
                     src="https://github.com/maxwellsquared/minimal-portfolio/blob/main/img/spaceship_beauty_back.png?raw=true"
@@ -70,6 +79,7 @@ const Portfolio = () => {
                     its glowing pink engines.
                 </p>
                 <StaticImage
+                    layout="constrained"
                     width="600"
                     alt="Video game where a ship flies around a planet and shoots glowing targets."
                     src="https://github.com/maxwellsquared/minimal-portfolio/blob/main/img/Gameplay-2.png?raw=true"
@@ -82,8 +92,8 @@ const Portfolio = () => {
                 </p>
                 <p>
                     If you're curious about my process, I wrote a{" "}
-                    <a href="/game">blog article about building this game</a>.
-                    I'll be updating it as I add features!
+                    <a href="/game">dev log about building this game</a>. I'll
+                    be updating it as I add features!
                 </p>
             </section>
 
@@ -100,8 +110,9 @@ const Portfolio = () => {
                     </i>
                 </p>
                 <StaticImage
+                    layout="constrained"
                     width="600"
-                    alt="Text interface with a randomly generated Dungeons and Dragons character"
+                    alt="Mobile text interface with a randomly generated Dungeons and Dragons character, held in a fantasy tavern"
                     src="https://github.com/maxwellsquared/minimal-portfolio/blob/main/img/npc1.jpg?raw=true"
                 />
                 <p>
@@ -111,10 +122,40 @@ const Portfolio = () => {
                     IRL!).
                 </p>
                 <StaticImage
+                    layout="constrained"
                     width="600"
                     alt="Text interface with a randomly generated Dungeons and Dragons character"
                     src="https://github.com/maxwellsquared/minimal-portfolio/blob/main/img/npc2.jpg?raw=true"
                 />
+            </section>
+            <section>
+                <h3>
+                    <a href="https://www.boneandburl.ca">Bone and Burl</a>
+                </h3>
+                <p>
+                    Tessa Wright of Bone and Burl hand-crafts beautiful,
+                    heirloom-quality wooden furniture and jewelry. She's an
+                    incredible woodworker and the pieces she makes are a real
+                    delight. I collaborated with a friend to build her a clean,
+                    mobile-friendly website using NextJS to showcase her pieces
+                    and attract clients for custom work.
+                </p>
+                <StaticImage
+                    layout="constrained"
+                    width="600"
+                    alt="Website showing a closeup of a woman carving wood"
+                    src="https://github.com/maxwellsquared/minimal-portfolio/blob/main/img/boneburl1.png?raw=true"
+                />
+                <p>
+                    In addition to writing code and helping with branding, I
+                    went over to Tessa's house and photographed her pieces. I
+                    also took some slow-motion video of her working, which I
+                    used for a hero video on the site. Seeing Tessa's work in
+                    person made me realize how beautiful woodwork could be--she
+                    enjoys combining dramatic textures like zebrawood with
+                    exquisite joinery--and I knew the site had to communicate
+                    that to visitors.
+                </p>
             </section>
 
             <section>
@@ -136,6 +177,7 @@ const Portfolio = () => {
                     <i></i>
                 </p>
                 <StaticImage
+                    layout="constrained"
                     width="600"
                     alt="Spooky yet minimalist website with icon of an abstract tentacled eldritch horror. The text is styled to remind the user of an old typewriter"
                     src="https://github.com/maxwellsquared/minimal-portfolio/blob/main/img/ctt1.jpg?raw=true"
@@ -148,6 +190,7 @@ const Portfolio = () => {
                     the user know they made a mistake.
                 </p>
                 <StaticImage
+                    layout="constrained"
                     width="600"
                     alt="Website with graphs about how fast a user can type"
                     src="https://github.com/maxwellsquared/minimal-portfolio/blob/main/img/ctt2.jpg?raw=true"
@@ -181,6 +224,7 @@ const Portfolio = () => {
                     </i>
                 </p>
                 <StaticImage
+                    layout="constrained"
                     width="600"
                     alt="Brendan Boyd, a handsome smiling young man with stubble wearing a knitted jacket, holds a grotesque but adorable puppet he made"
                     src="https://github.com/maxwellsquared/minimal-portfolio/blob/main/img/bjb1.jpg?raw=true"
@@ -195,6 +239,7 @@ const Portfolio = () => {
                 </p>
 
                 <StaticImage
+                    layout="constrained"
                     width="600"
                     alt="A mockup with three different sections. Below is a caption that says 'IDEA: different designs for different services?' One design is for puppeteering and has squiggly bright 1990s shapes and a goofy soft puppet with eyes made from ping-pong balls; one is for puppet-making and is decorated with splatters of goo over a background of fake fur with a big picture of a ratty disheveled cat puppet in a priest costume from the movie The Exorcist; one is for haunted houses and has pictures of cobweb-covered skeletons and evil clowns in a dilapidated stone and wood mansion"
                     src="https://github.com/maxwellsquared/minimal-portfolio/blob/main/img/bjb2.jpg?raw=true"
@@ -225,30 +270,34 @@ const Portfolio = () => {
                     </i>
                 </p>
                 <StaticImage
+                    layout="constrained"
                     width="600"
                     alt="Reportex website homepage with decorative image of a piece of sculpture"
                     src="https://github.com/maxwellsquared/minimal-portfolio/blob/main/img/reportex-1.jpg?raw=true"
                 />
                 <p>
                     This was an enormous project that took almost a year to
-                    complete! I brought in an external consultant to collaborate
-                    on fonts, colours, and branding. We knew the site would need
-                    to be heavily edited by non-technical people, so we built it
-                    using Wordpress to allow for code-free editing by just about
+                    complete! I brought in a talented consultant to collaborate
+                    with us on choosing new fonts, refining our colours, and
+                    reimagining our brand. We knew the site would need to be
+                    heavily edited by non-technical people, so we chose to use
+                    use Wordpress to allow for code-free editing by just about
                     anyone.
                 </p>
                 <StaticImage
+                    layout="constrained"
                     width="600"
                     alt="Reportex website homepage with decorative image of a piece of sculpture"
                     src="https://github.com/maxwellsquared/minimal-portfolio/blob/main/img/reportex2.jpg?raw=true"
                 />
                 <p>
-                    I ended up having to code quite a bit of functionality from
-                    scratch. Some particular favourites were a PHP program to
-                    automatically generate and email us filled-in audio request
-                    forms for the Supreme Court when a client ordered a
-                    transcript and an internal procedures wiki with everything
-                    we needed to run our offices.
+                    Post-launch, I ended up coding quite a bit of functionality
+                    from scratch to meet our growing needs. Some particular
+                    favourites were a PHP program to automatically generate and
+                    email us filled-in audio request forms for the Supreme Court
+                    when a client ordered a transcript and an internal
+                    procedures wiki with everything we needed to run our
+                    offices.
                 </p>
             </section>
         </Layout>
