@@ -24,7 +24,7 @@ const Game = () => {
                 </p>
                 <StaticImage
                     width="600"
-                    alt="Game interface on a track with a camera and a rocket ship"
+                    alt="Video game where a ship flies around a planet and shoots glowing targets."
                     src="https://github.com/maxwellsquared/minimal-portfolio/blob/main/img/Gameplay-2.png?raw=true"
                 />
                 <p>

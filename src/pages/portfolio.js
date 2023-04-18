@@ -42,6 +42,50 @@ const Portfolio = () => {
                     components.
                 </p>
             </section>
+            <section>
+                <h3>Celestial Weasel Squadron (Unity)</h3>
+                <p>
+                    I wanted to get better at Unity and C#, so I built this rail
+                    shooter. It's not quite finished, but it works!
+                </p>
+                <StaticImage
+                    width="600"
+                    alt="Unity interface showing a track and terrain"
+                    src="https://github.com/maxwellsquared/minimal-portfolio/blob/main/img/track-movement-2.png?raw=true"
+                />
+                <p>
+                    I used the Cinemachine dolly and track system parented to a
+                    GameplayPlane object which contains the player, the camera,
+                    and more.{" "}
+                </p>
+
+                <StaticImage
+                    width="600"
+                    alt="a cool spaceship from the back"
+                    src="https://github.com/maxwellsquared/minimal-portfolio/blob/main/img/spaceship_beauty_back.png?raw=true"
+                />
+                <p>
+                    Modelling low-poly assets in Blender is always a lot of fun,
+                    and this was no exception! I really like the hero ship and
+                    its glowing pink engines.
+                </p>
+                <StaticImage
+                    width="600"
+                    alt="Video game where a ship flies around a planet and shoots glowing targets."
+                    src="https://github.com/maxwellsquared/minimal-portfolio/blob/main/img/Gameplay-2.png?raw=true"
+                />
+                <p>
+                    To get a retro feel, I used a render texture to rerender
+                    each frame of the game at 320x180. I wrote coroutines for
+                    camera shake, which are all called differently when the
+                    player shoots, boosts, or explodes.
+                </p>
+                <p>
+                    If you're curious about my process, I wrote a{" "}
+                    <a href="/game">blog article about building this game</a>.
+                    I'll be updating it as I add features!
+                </p>
+            </section>
 
             <section>
                 <h3>
