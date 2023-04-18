@@ -22,6 +22,11 @@ const Game = () => {
                     but bangers. Like that Ramones album, the best part is that
                     it makes you think, “Hey, I could do this,” so I did.
                 </p>
+                <StaticImage
+                    width="600"
+                    alt="Game interface on a track with a camera and a rocket ship"
+                    src="https://github.com/maxwellsquared/minimal-portfolio/blob/main/img/Gameplay-2.png?raw=true"
+                />
                 <p>
                     Or, at least, I'm doing it. It's not done yet: I still have
                     a lot of features to add, but you can fly a ship around and
@@ -98,7 +103,7 @@ const Game = () => {
                 <StaticImage
                     width="600"
                     alt="Game interface on a track with a camera and a rocket ship"
-                    src="https://github.com/maxwellsquared/minimal-portfolio/blob/main/img/pai1.jpg?raw=true"
+                    src="https://github.com/maxwellsquared/minimal-portfolio/blob/main/img/track-movement.png?raw=true"
                 />
 
                 <p>
@@ -121,8 +126,8 @@ const Game = () => {
 
                 <StaticImage
                     width="600"
-                    alt="Google Doc interface showing an AI score"
-                    src="https://github.com/maxwellsquared/minimal-portfolio/blob/main/img/pai1.jpg?raw=true"
+                    alt="Unity interface showing a track and terrain"
+                    src="https://github.com/maxwellsquared/minimal-portfolio/blob/main/img/track-movement-2.png?raw=true"
                 />
 
                 <p>
@@ -240,7 +245,7 @@ const Game = () => {
                 <StaticImage
                     width="600"
                     alt="a cool spaceship from the back"
-                    src="https://github.com/maxwellsquared/minimal-portfolio/blob/main/img/pai1.jpg?raw=true"
+                    src="https://github.com/maxwellsquared/minimal-portfolio/blob/main/img/spaceship_beauty_back.png?raw=true"
                 />
 
                 <p>
@@ -250,8 +255,8 @@ const Game = () => {
                 </p>
                 <StaticImage
                     width="600"
-                    alt="a cool spaceship from the back"
-                    src="https://github.com/maxwellsquared/minimal-portfolio/blob/main/img/pai1.jpg?raw=true"
+                    alt="a cool spaceship from the front"
+                    src="https://github.com/maxwellsquared/minimal-portfolio/blob/main/img/spaceship_beauty_side.png?raw=true"
                 />
                 <p>
                     These renders are in front of the skybox that I also made
@@ -343,7 +348,7 @@ const Game = () => {
                 <StaticImage
                     width="600"
                     alt="diagram of two spaceships on a track, pointed at each other"
-                    src="https://github.com/maxwellsquared/minimal-portfolio/blob/main/img/pai1.jpg?raw=true"
+                    src="https://github.com/maxwellsquared/minimal-portfolio/blob/main/img/track_movement_3.png?raw=true"
                 />
                 <p>
                     I spawn enemies with a dolly cart called EnemyCart. It's a
@@ -572,8 +577,14 @@ const Game = () => {
                     To make the game world feel a little more alive, I added two
                     larger dolly tracks outside the play area and brought in
                     more ships I made in Blender: a small fighter craft which
-                    will be an enemy in future, and a massive capital ship. The
-                    fighters operate in small swarms, and I used the
+                    will be an enemy in future, and a massive capital ship. It
+                    adds some much-needed depth to the scene:
+                    <StaticImage
+                        width="600"
+                        alt="lots of spaceships flying around with a big one in the distance"
+                        src="https://github.com/maxwellsquared/minimal-portfolio/blob/main/img/Gameplay-4.png?raw=true"
+                    />
+                    The fighters operate in small swarms, and I used the
                     transform.LookAt function to rotate them at a target
                     slightly ahead of them on the track, which makes them swoop
                     around elegantly and hides the fact that they're on rails.
@@ -592,7 +603,10 @@ const Game = () => {
                 <p>
                     My next step is to add a bomb for players which moves along
                     an arc-shaped path and detonates when it hits something. I'm
-                    also planning on adding sound effects and music.
+                    also planning on adding sound effects and music. As you can
+                    tell from the screenshots, I'm also going to need to figure
+                    out how much post-processing I can get away with before it
+                    starts looking like an Xbox 360 game.
                 </p>
             </section>
         </Layout>
