@@ -6,6 +6,44 @@ const Game = () => {
     return (
         <Layout pageTitle="Dev Log">
             <section>
+                <h2>04/24 Update</h2>
+                <p>
+                    <em>
+                        TL;DR:{" "}
+                        <a href="https://maxwellsquared.itch.io/celestial-vermin-squadron">
+                            go play the latest build of Celestial Vermin
+                            Squadron here
+                        </a>
+                        . Mouse only for now; joystick is currently disabled.
+                    </em>
+                </p>
+                <p>
+                    I've added mouse controls and disabled joystick controls;
+                    eventually I'll have an options menu to toggle this. Dealing
+                    with the mouse was surprisingly tricky. The way I'd set up
+                    controls with the joystick left the player ship constantly
+                    trying to return to the center of the screen when the mouse
+                    stopped moving. After rewriting the move function to get
+                    around this, I realized that the way I was checking the
+                    position of the mouse was being interfered with by the
+                    render texture I was using to downsample my image to
+                    320x180, so this build of the game disables the low-res
+                    effect.
+                </p>
+                <p>
+                    I'm not sure which I prefer. Learning to use render textures
+                    was a fun challenge, but I feel a little like when I was 12
+                    and thought the more Photoshop filters I used, the more
+                    Graphic Design I was doing. Maybe the game should stand on
+                    its own without the low-res effect. Open to feedback.
+                </p>
+                <p>
+                    There's now music and sound effects, which adds a lot--even
+                    if the music is something I threw together in Ableton in
+                    literally twenty minutes.
+                </p>
+
+                <hr />
                 <p>
                     Over the past year, I've fallen in love with a new kind of
                     video game: something halfway between a traditional indie
@@ -49,6 +87,11 @@ const Game = () => {
                     decided that combining bullet-heaven-style upgrades with
                     rail shooting à la Star Fox 64 would be something fun,
                     original, and within my capabilities.
+                </p>
+                <p>
+                    So: Star Fox 64, but you go around the level in an endless
+                    loop until there are too many enemies and you die, and the
+                    more you upgrade your ship, the more enemies you can handle.
                 </p>
 
                 <p>
@@ -166,7 +209,13 @@ const Game = () => {
                     would put that input into a variable h or v and pass it
                     along to a LocalMove function along with a speed value,
                     which added those variables as a Vector3 to the object's
-                    transform.localPosition.
+                    transform.localPosition. (
+                    <em>
+                        Note: this movement functionality is currently not in
+                        the live build--I have a simplified, mouse-only version
+                        right now while I'm working on mouse controls!
+                    </em>
+                    )
                 </p>
                 <p>
                     Next in LocalMove(), a ClampPosition() function would be
@@ -459,7 +508,7 @@ const Game = () => {
                     Our Shake function is a coroutine--an ongoing thing that
                     lets you pause and pick up where you left off, which makes
                     running a bunch of things at the same time easier. This
-                    mostly means that calling it is a little weird (in the
+                    mostly means that calling it is a little weird: in the
                     player object, instead of just calling
                     cameraShake.Shake(duration, magnitude) I have to use
                     StartCoroutine(cameraShake.Shake(duration, magnitude)), at
@@ -526,9 +575,10 @@ const Game = () => {
 
                 <p>
                     I started with another particle system to represent the
-                    explosion as the player's ship hit the planet (particle
-                    systems are fun!). I made a simple additive blend material,
-                    which I also applied to my boost particle system.
+                    explosion as the player's ship hit anything with the
+                    "ground" tag (particle systems are fun!). I made a simple
+                    additive blend material, which I also applied to my boost
+                    particle system.
                 </p>
 
                 <p>
@@ -576,6 +626,65 @@ const Game = () => {
                     4k monitors) and turning off anti-aliasing to get nice sharp
                     pixels.
                 </p>
+                <p>
+                    The current build of the game has the low-res effect
+                    disabled as I realized the way I was getting the mouse
+                    position was sending the position of the mouse on the
+                    320x180 render texture, not the 1920x1080 screen, so the
+                    player's movement was drastically limited. I'll fix this in
+                    a future build and possibly add a toggle for the effect in
+                    an options menu, but for now you get a peek at the assets in
+                    unnaturally high resolution.
+                </p>
+
+                <h2>Sound and Music</h2>
+                <p>
+                    The most important thing to me about a game is how it feels
+                    moment-to-moment, and sound is a huge component of that. I
+                    knew I wanted blippy, lo-fi effects. I have some experience
+                    with synthesizers, and I found a new software synth called
+                    LabChirp which is optimized for sound effects instead of
+                    music. I combined saw, square, and sine waves and noise with
+                    a few different filters and envelopes to make a combination
+                    of bleeps, zaps, and explosions. To make them hit a little
+                    harder for ears used to modern sound design, I brought them
+                    into Audacity, added a bit of compression and EQ, and
+                    layered them with each other and with field recordings
+                    sourced from royalty-free community sources.
+                </p>
+                <p>
+                    When it came time to actually put the sounds in the game, I
+                    began with the enemy death sound and was puzzled as to why
+                    it wasn't working. I realized I'd chosen the trickiest
+                    situation as enemies delete their game object on death, so
+                    the audio source that started playing the death sound was
+                    immediately gone. I decided to attach the audio source to
+                    the enemy explosion particle system prefab, instead, which
+                    worked perfectly as the particle system deletes itself once
+                    it finishes playing (which is well after the sound
+                    finishes).
+                </p>
+                <p>
+                    Adding sounds to the player for death and shooting was much
+                    simpler, as the player object persists throughout the game,
+                    but I did add a feature that randomizes the volume of the
+                    shooting sound slightly to make it sound less repetitive.
+                    For the boost sound, I took a brief white noise sound with a
+                    natural fade-out and wrote a function to play it at a fixed
+                    interval while boosting, then played around with that
+                    interval until it sounded good.
+                </p>
+                <p>
+                    After spending about half an hour making a song in Ableton,
+                    I threw it on an audio source and set it to play on awake
+                    and loop, and there was my game music. In the future I'd
+                    really like to implement side-chain compression on the music
+                    so that the volume ducks when the player shoots or something
+                    blows up to make it punchier, but it seems like audio mixing
+                    isn't supported well in WebGL and it's really important for
+                    me to be able to just send people a link to play this in
+                    their browser.
+                </p>
 
                 <h2>Environmentalism</h2>
 
@@ -598,24 +707,37 @@ const Game = () => {
                     slightly ahead of them on the track, which makes them swoop
                     around elegantly and hides the fact that they're on rails.
                 </p>
+                <p>
+                    Later, I started adding large cuboid objects intruding into
+                    the player's path to serve as wrecked buildings and (in part
+                    of the level) a city the player has to fly through. The
+                    dolly track system made it easy to throw obstacles into the
+                    player's path to navigate around, and I just tagged them
+                    with "ground" so they automatically make the player crash if
+                    they run into them. Copy-pasting them and randomly adjusting
+                    the height of the cuboid objects gave me a pretty good
+                    little city, and I sunk a few of them just enough that the
+                    player can skim them as they fly through. I threw some enemy
+                    ships on a loop around the city as well, and once I get some
+                    textures and effects going (fires? plumes of black smoke?
+                    screams?) it should be pretty exciting.
+                </p>
                 <h2>Deployment</h2>
                 <p>
                     I decided to build the game to WebGL, which is very handy
-                    for getting it onto somewhere like itch.io (it's actually
-                    there already in prototype form--if you email me, I'll give
-                    you the password to try it). Being able to play the game
-                    with a click of a button is a huge time saver, and it's also
-                    a lot more convenient for people to try out.
+                    for getting it onto somewhere like itch.io. Being able to
+                    play the game with a click of a button is a huge time saver,
+                    and it's also a lot more convenient for people to try out.
+                    Unity made it easy to add a splash screen.
                 </p>
 
                 <h2>Next Steps</h2>
                 <p>
                     My next step is to add a bomb for players which moves along
-                    an arc-shaped path and detonates when it hits something. I'm
-                    also planning on adding sound effects and music. As you can
-                    tell from the screenshots, I'm also going to need to figure
-                    out how much post-processing I can get away with before it
-                    starts looking like an Xbox 360 game.
+                    an arc-shaped path and detonates when it hits something. As
+                    you can tell from the screenshots, I'm also going to need to
+                    figure out how much post-processing I can get away with
+                    before it starts looking like an Xbox 360 game.
                 </p>
             </section>
         </Layout>
