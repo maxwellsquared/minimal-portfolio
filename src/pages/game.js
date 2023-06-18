@@ -6,44 +6,6 @@ const Game = () => {
     return (
         <Layout pageTitle="Dev Log">
             <section>
-                <h2>04/24 Update</h2>
-                <p>
-                    <em>
-                        TL;DR:{" "}
-                        <a href="https://maxwellsquared.itch.io/celestial-vermin-squadron">
-                            go play the latest build of Celestial Vermin
-                            Squadron here
-                        </a>
-                        . Mouse only for now; joystick is currently disabled.
-                    </em>
-                </p>
-                <p>
-                    I've added mouse controls and disabled joystick controls;
-                    eventually I'll have an options menu to toggle this. Dealing
-                    with the mouse was surprisingly tricky. The way I'd set up
-                    controls with the joystick left the player ship constantly
-                    trying to return to the center of the screen when the mouse
-                    stopped moving. After rewriting the move function to get
-                    around this, I realized that the way I was checking the
-                    position of the mouse was being interfered with by the
-                    render texture I was using to downsample my image to
-                    320x180, so this build of the game disables the low-res
-                    effect.
-                </p>
-                <p>
-                    I'm not sure which I prefer. Learning to use render textures
-                    was a fun challenge, but I feel a little like when I was 12
-                    and thought the more Photoshop filters I used, the more
-                    Graphic Design I was doing. Maybe the game should stand on
-                    its own without the low-res effect. Open to feedback.
-                </p>
-                <p>
-                    There's now music and sound effects, which adds a lot--even
-                    if the music is something I threw together in Ableton in
-                    literally twenty minutes.
-                </p>
-
-                <hr />
                 <p>
                     Over the past year, I've fallen in love with a new kind of
                     video game: something halfway between a traditional indie
