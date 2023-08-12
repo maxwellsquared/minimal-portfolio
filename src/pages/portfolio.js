@@ -7,9 +7,8 @@ const Portfolio = () => {
         <Layout pageTitle="Portfolio">
             <section>
                 <h3>
-                    <a href="https://passed.ai">
-                        Passed.AI React App/Chrome Extension
-                    </a>
+                    <a href="https://passed.ai">Passed.AI</a> (React App/Chrome
+                    Extension)
                 </h3>
                 <p>
                     <i>
@@ -49,8 +48,9 @@ const Portfolio = () => {
             <section>
                 <h3>
                     <a href="https://www.seedlingsforesteducation.com/">
-                        Seedlings Website
-                    </a>
+                        Seedlings
+                    </a>{" "}
+                    (Website)
                 </h3>
                 <p>
                     Building websites for local businesses is one of my
@@ -88,14 +88,17 @@ const Portfolio = () => {
                 </p>
             </section>
             <section>
-                <h3>Celestial Vermin Squadron Game</h3>
+                <h3>Celestial Vermin Squadron (Game)</h3>
                 <p>
                     I wanted to get better at Unity and C#, so I built this rail
                     shooter. It's still a work in progress, but it's playable
                     and I've learned a ton!{" "}
                     <a href="https://maxwellsquared.itch.io/celestial-vermin-squadron">
-                        Here's a prototype you can play in your browser.
-                    </a>
+                        Here's a prototype
+                    </a>{" "}
+                    you can play in your browser.{" "}
+                    <a href="/game">Here's a dev log</a> I wrote about building
+                    the game. I'll be updating it as I add features!
                 </p>
                 <StaticImage
                     layout="constrained"
@@ -132,18 +135,12 @@ const Portfolio = () => {
                     camera shake, which are all called differently when the
                     player shoots, boosts, or explodes.
                 </p>
-                <p>
-                    If you're curious about my process, I wrote a{" "}
-                    <a href="/game">dev log about building this game</a>. I'll
-                    be updating it as I add features!
-                </p>
             </section>
 
             <section>
                 <h3>
-                    <a href="https://simplenpc.vercel.app">
-                        SimpleNPC React App
-                    </a>
+                    <a href="https://simplenpc.vercel.app">SimpleNPC</a> (React
+                    App)
                 </h3>
                 <p>
                     <i>
@@ -174,9 +171,8 @@ const Portfolio = () => {
             </section>
             <section>
                 <h3>
-                    <a href="https://www.boneandburl.ca">
-                        Bone and Burl Website
-                    </a>
+                    <a href="https://www.boneandburl.ca">Bone and Burl</a>{" "}
+                    (Website)
                 </h3>
                 <p>
                     Tessa Wright of Bone and Burl hand-crafts beautiful,
@@ -207,8 +203,9 @@ const Portfolio = () => {
             <section>
                 <h3>
                     <a href="http://www.cthulhuteachestyping.com">
-                        Cthulhu Teaches Typing App
-                    </a>
+                        Cthulhu Teaches Typing
+                    </a>{" "}
+                    (App/Game)
                 </h3>
                 <p>
                     <i>
@@ -303,9 +300,7 @@ const Portfolio = () => {
                 </p>
             </section> */}
             <section>
-                <h3>
-                    <a>Reportex Website</a>
-                </h3>
+                <h3>Reportex (Website)</h3>
                 <p>
                     <i>
                         Reportex was a full-service legal services firm focusing
