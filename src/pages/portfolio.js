@@ -7,7 +7,9 @@ const Portfolio = () => {
         <Layout pageTitle="Portfolio">
             <section>
                 <h3>
-                    <a href="https://passed.ai">Passed.AI</a>
+                    <a href="https://passed.ai">
+                        Passed.AI React App/Chrome Extension
+                    </a>
                 </h3>
                 <p>
                     <i>
@@ -45,14 +47,54 @@ const Portfolio = () => {
                 </p>
             </section>
             <section>
-                <h3>Celestial Weasel Squadron (Unity)</h3>
+                <h3>
+                    <a href="https://www.seedlingsforesteducation.com/">
+                        Seedlings Website
+                    </a>
+                </h3>
+                <p>
+                    Building websites for local businesses is one of my
+                    favourite things to do. I find SME owners a lot of fun to
+                    work with--their enthusiasm is contagious! Working with
+                    Seedlings to build their new site was no exception.
+                </p>
+                <StaticImage
+                    layout="constrained"
+                    width="600"
+                    alt="Seedlings website with happy child playing in nature."
+                    src="https://github.com/maxwellsquared/minimal-portfolio/blob/main/img/seedlings1.png?raw=true"
+                />
+                <p>
+                    I built this site from the ground up using the Squarespace
+                    platform with some custom HTML/CSS/JavaScript. While I
+                    generally prefer to work with something like NextJS, having
+                    a low/no-code solution for updating the site was important
+                    to the client so non-technical staff could perform content
+                    updates. The client was thrilled, and the project came in
+                    well under budget.
+                </p>
+                <StaticImage
+                    layout="constrained"
+                    width="600"
+                    alt="Seedlings website with decorative pinecone and grass with daisies."
+                    src="https://github.com/maxwellsquared/minimal-portfolio/blob/main/img/seedlings2.png?raw=true"
+                />
+                <p>
+                    This project let me flex my design chops, which is always a
+                    great opportunity. In addition to finding fun solutions for
+                    displaying all the great photo assets the client had on
+                    hand, I subtly updated the logo and designed these pinecone
+                    decorative elements to the client's specifications.
+                </p>
+            </section>
+            <section>
+                <h3>Celestial Vermin Squadron Game</h3>
                 <p>
                     I wanted to get better at Unity and C#, so I built this rail
-                    shooter. It's not quite finished, but it works!{" "}
-                    <a href="https://maxwellsquared.itch.io/celestial-weasel-squadron">
-                        Here's a prototype you can play in your browser. Mouse
-                        movement is currently disabled, so be sure to plug in an
-                        Xbox controller.
+                    shooter. It's still a work in progress, but it's playable
+                    and I've learned a ton!{" "}
+                    <a href="https://maxwellsquared.itch.io/celestial-vermin-squadron">
+                        Here's a prototype you can play in your browser.
                     </a>
                 </p>
                 <StaticImage
@@ -75,8 +117,8 @@ const Portfolio = () => {
                 />
                 <p>
                     Modelling low-poly assets in Blender is always a lot of fun,
-                    and this was no exception! I really like the hero ship and
-                    its glowing pink engines.
+                    and this was no exception! I particularly like the hero ship
+                    and its glowing pink engines.
                 </p>
                 <StaticImage
                     layout="constrained"
@@ -99,7 +141,9 @@ const Portfolio = () => {
 
             <section>
                 <h3>
-                    <a href="https://simplenpc.vercel.app">SimpleNPC</a>
+                    <a href="https://simplenpc.vercel.app">
+                        SimpleNPC React App
+                    </a>
                 </h3>
                 <p>
                     <i>
@@ -130,7 +174,9 @@ const Portfolio = () => {
             </section>
             <section>
                 <h3>
-                    <a href="https://www.boneandburl.ca">Bone and Burl</a>
+                    <a href="https://www.boneandburl.ca">
+                        Bone and Burl Website
+                    </a>
                 </h3>
                 <p>
                     Tessa Wright of Bone and Burl hand-crafts beautiful,
@@ -161,7 +207,7 @@ const Portfolio = () => {
             <section>
                 <h3>
                     <a href="http://www.cthulhuteachestyping.com">
-                        Cthulhu Teaches Typing
+                        Cthulhu Teaches Typing App
                     </a>
                 </h3>
                 <p>
@@ -209,7 +255,7 @@ const Portfolio = () => {
                 </p>
             </section>
 
-            <section>
+            {/* <section>
                 <h3>Brendan Boyd Puppetry (WIP)</h3>
                 <p>
                     <i>
@@ -255,18 +301,18 @@ const Portfolio = () => {
                     mockups to get a better idea of what they're looking for,
                     then refining once I know I'm on the right track.
                 </p>
-            </section>
+            </section> */}
             <section>
                 <h3>
-                    <a href="https://www.reportex.ca">Reportex</a>
+                    <a>Reportex Website</a>
                 </h3>
                 <p>
                     <i>
                         Reportex was a full-service legal services firm focusing
                         on court reporting. I was the Digital Content Director
                         and the internal lead on our site redesign. We were
-                        bought in 2021 by a big American firm. The next year, I
-                        quit to go do programming full-time.
+                        bought in 2021 by Veritext, a big American firm. The
+                        next year, I quit to go do programming full-time.
                     </i>
                 </p>
                 <StaticImage
