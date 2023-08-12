@@ -7,8 +7,8 @@ const Portfolio = () => {
         <Layout pageTitle="Portfolio">
             <section>
                 <h3>
-                    <a href="https://passed.ai">Passed.AI</a> (React App/Chrome
-                    Extension)
+                    <a href="https://passed.ai">Passed.AI</a>
+                    <br /> (React App/Chrome Extension)
                 </h3>
                 <p>
                     <i>
