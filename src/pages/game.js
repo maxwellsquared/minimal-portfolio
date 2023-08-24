@@ -7,20 +7,13 @@ const Game = () => {
         <Layout pageTitle="Dev Log">
             <section>
                 <p>
-                    Over the past year, I've fallen in love with a new kind of
-                    video game: something halfway between a traditional indie
-                    roguelike and a classic arcade game (take your pick of
-                    "classic": Newgrounds flash titles, 1980s coin-op games, or
-                    mobile games from the early App Store era). These things are
-                    snackable, usually with simple graphics (Vampire Survivors,
-                    probably the biggest example of the genre, started with art
-                    from an asset pack) and satisfying mechanics that offer some
-                    kind of persistent upgrades as incentive to complete
-                    bite-sized runs. If triple-A games are bloated early-70s
-                    prog rock albums, these games are the first Ramones album:
-                    29 minutes long, recorded in a week for $6400, and nothing
-                    but bangers. Like that Ramones album, the best part is that
-                    it makes you think, “Hey, I could do this,” so I did.
+                    I've always been really inspired by small, arcade-style
+                    games. From the Newgrounds era to the Vampire Survivors
+                    phenomenon, my favourite thing about them is that they make
+                    game design feel like something achievable by a single
+                    hobbyist. It's great motivation for learning. This year
+                    (2023) I decided to build my own 3D game and write down what
+                    I learned. Here are the results so far.
                 </p>
                 <StaticImage
                     layout="constrained"
@@ -29,14 +22,14 @@ const Game = () => {
                     src="https://github.com/maxwellsquared/minimal-portfolio/blob/main/img/Gameplay-2.png?raw=true"
                 />
                 <p>
-                    Or, at least, I'm doing it. It's not done yet: I still have
-                    a lot of features to add, but you can fly a ship around and
-                    shoot things with mostly complete effects and controls and
-                    scoring.
+                    It's not done yet: I still have a lot of features to add,
+                    but you can fly a ship around and shoot things with mostly
+                    complete effects and controls and scoring. As of the latest
+                    update, there are enemies which kill you if you crash into
+                    them and a life system--run out and there's a game over
+                    screen which pops you back to the main menu, where you can
+                    pick a different level.
                 </p>
-
-                <p>Here's my process so far.</p>
-
                 <h2>Initial Planning</h2>
 
                 <p>
@@ -357,9 +350,8 @@ const Game = () => {
                 </p>
 
                 <p>
-                    My eventual plan is for the enemies to essentially travel
-                    around the same track as the player, but in the opposite
-                    direction:
+                    I planned on having enemies travel around the same track as
+                    the player, but in the opposite direction:
                 </p>
                 <StaticImage
                     layout="constrained"
@@ -368,14 +360,13 @@ const Game = () => {
                     src="https://github.com/maxwellsquared/minimal-portfolio/blob/main/img/track_movement_3.png?raw=true"
                 />
                 <p>
-                    I spawn enemies with a dolly cart called EnemyCart. It's a
+                    I spawn targets with a dolly cart called EnemyCart. It's a
                     dolly going on the same track as the player but backwards,
                     with a script that initialises an enemy every few seconds at
                     a random offset from the track. This means that as the
                     player moves along the track, they will constantly fly into
-                    enemies. For now, it spawns static targets, but it will
-                    eventually spawn different kinds of enemies who move and
-                    shoot back.
+                    enemies. I started with a static target--a nice low-hanging
+                    fruit to see if my approach worked!
                 </p>
 
                 <p>
@@ -390,18 +381,31 @@ const Game = () => {
                     destroys itself once the animation finishes so I don't have
                     to do any fancy scripting to it.
                 </p>
+                <p>
+                    When it came time to add actual enemies, I built a system
+                    that acts similar to the target spawner, except instead of
+                    actually travelling along the dolly track, it just spawns
+                    enemies a fixed distance along the track from the player.
+                    Each enemy prefab has a cart, and when they're spawned,
+                    their cart is attached to the dolly track. Their prefab also
+                    has an invisible focal point just ahead of them on the
+                    track. Making the ships aim at this focal point ahead of
+                    them is an easy way of making their movement look dynamic,
+                    like they're drifting around a racetrack! Each enemy gets a
+                    script similar to the target.
+                </p>
                 <h2>Boost and Camera Shake</h2>
                 <p>
                     I added boost to the PlayerController script by checking in
-                    Update() if the player was pressing the B button on the
-                    gamepad. When the B button is first pushed, isBoosting is
-                    set to true, SetSpeed() is called with forwardSpeed * 2 as
-                    an argument, and a looping particle system called
+                    Update() if the player was pressing the right mouse button.
+                    When the boost button is first pushed, isBoosting is set to
+                    true, SetSpeed() is called with forwardSpeed * 2 as an
+                    argument, and a looping particle system called
                     boostParticles starts playing. The particle system is a game
                     object which is a child of the Player object, and when boost
                     starts, the player object calls the .Play() method on its
-                    reference to the boostParticles object. When the B button
-                    goes up, isBoosting is set to false, speed returns to
+                    reference to the boostParticles object. When the button goes
+                    up, isBoosting is set to false, speed returns to
                     forwardSpeed, and the .Stop() method is called on
                     boostParticles.
                 </p>
