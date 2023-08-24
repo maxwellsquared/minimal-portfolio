@@ -518,16 +518,44 @@ const Game = () => {
 
                 <p>
                     The GameManager currently just keeps track of the player
-                    score, but will include lives, upgrades, elapsed level time,
-                    and other player progress information in future. It keeps a
-                    score variable and has an UpdateScore method which takes in
-                    an integer, adds that integer to the score, and updates a
-                    scoreText UI element with the score information.
+                    score and lives, but will include upgrades, elapsed level
+                    time, and other player progress information in future. It
+                    keeps a score variable and has an UpdateScore method which
+                    takes in an integer, adds that integer to the score, and
+                    updates a scoreText UI element with the score information.
                 </p>
 
                 <p>
                     As the game gets more complicated, organizing functionality
-                    like this will really start to come in handy.
+                    like this will really start to come in handy!
+                </p>
+
+                <h2>Loading Levels</h2>
+
+                <p>
+                    I use Unity's asynchronous scene load function to bring in
+                    new scenes for the main menu, level loading, game over, and
+                    returning to the main menu from a game over. Originally, I
+                    was calling a function that started a coroutine where I
+                    could 1. load asynchronously, 2. immediately disable setting
+                    a new active scene, and then 3. once my async operation's{" "}
+                    <i>.progress</i> property was at 90 percent (meaning it was
+                    mostly loaded, but not yet set active), I would 4. wait for
+                    a keypress (still in the coroutine) and only then would I
+                    set the active scene to the new one.
+                </p>
+                <p>
+                    This made the game feel a little smoother, but I was running
+                    into huge headaches getting player input into the
+                    asynchronous load coroutine. After doing some testing, I
+                    found that load times weren't enough of an issue to justify
+                    the added complication. At some point in future I might go
+                    back to my original idea, but I found myself writing a
+                    function to loop through an enum of all the scenes then
+                    unloading all the scenes that <i>weren't</i> the active one,
+                    and I realized it was getting too complicated for this
+                    little game when using the regular asynchronous load worked
+                    fine.
                 </p>
 
                 <h2>Player Death and Resurrection</h2>
@@ -568,6 +596,15 @@ const Game = () => {
                     To add a little more pizzazz, I set useGravity to true on
                     the player's rigidBody and gave them an upwards pop, which
                     was unrealistic but funny.
+                </p>
+                <p>
+                    If the player runs out of lives, the PlayerDeath() function
+                    will call a GameOver() function that loads the Game Over
+                    scene after a couple seconds (before the respawn function is
+                    called). At some point I'm going to have the respawn
+                    function check if it can run programmatically, but for now I
+                    just skirt the issue by running GameOver() after two seconds
+                    and Respawn() after four.
                 </p>
 
                 <h2>Fun with Render Textures</h2>
@@ -641,15 +678,15 @@ const Game = () => {
                     interval until it sounded good.
                 </p>
                 <p>
-                    After spending about half an hour making a song in Ableton,
-                    I threw it on an audio source and set it to play on awake
-                    and loop, and there was my game music. In the future I'd
-                    really like to implement side-chain compression on the music
-                    so that the volume ducks when the player shoots or something
-                    blows up to make it punchier, but it seems like audio mixing
-                    isn't supported well in WebGL and it's really important for
-                    me to be able to just send people a link to play this in
-                    their browser.
+                    I made some original music in Ableton and in each scene
+                    threw a different track on an audio source and set it to
+                    play on awake. After enabling "loop," there was my game
+                    music. In the future I'd really like to implement side-chain
+                    compression on the music so that the volume ducks when the
+                    player shoots or something blows up to make it punchier, but
+                    it seems like audio mixing isn't supported well in WebGL and
+                    it's really important for me to be able to just send people
+                    a link to play this in their browser.
                 </p>
 
                 <h2>Environmentalism</h2>
