@@ -13,7 +13,11 @@ const Game = () => {
                     game design feel like something achievable by a single
                     hobbyist. It's great motivation for learning. This year
                     (2023) I decided to build my own 3D game and write down what
-                    I learned. Here are the results so far.
+                    I learned. It's now{" "}
+                    <a href="https://maxwellsquared.itch.io/celestial-vermin-squadron">
+                        playable in browser
+                    </a>
+                    , and I've written about my development process right here.
                 </p>
                 <StaticImage
                     layout="constrained"
@@ -72,7 +76,8 @@ const Game = () => {
                     something that I'd absolutely get bogged down in. I'm
                     looking forward to setting that up after the initial
                     mechanics are rock-solid, but for now I'm keeping the
-                    roguelike stuff for later.
+                    roguelike stuff for later, once I finish adding a simple
+                    upgrade system.
                 </p>
 
                 <h2>Gameplay Plane and Movement</h2>
@@ -121,7 +126,8 @@ const Game = () => {
                     they used this setup and it looked like it would fit my
                     needs nicely, so I stole the idea. The track system is very
                     handy and let me easily set up a track around the terrain
-                    I'd quickly sculpted.
+                    I'd quickly sculpted. I took the idea a step further by
+                    making it an endless loop.
                 </p>
 
                 <StaticImage
@@ -234,11 +240,6 @@ const Game = () => {
                     Start().
                 </p>
 
-                <p>
-                    Mouse controls are still pretty bad, so the game should be
-                    played with a controller, but adding decent mouse controls
-                    is next on my list.
-                </p>
                 <h2>Making It Pretty, Pretty Early</h2>
                 <p>
                     I'm putting it here to make it sound like I did the
@@ -274,13 +275,21 @@ const Game = () => {
                     planets and moons which I recolored and filtered to look
                     like they were hanging in the sky above an alien planet.
                 </p>
+                <p>
+                    I find that switching up what I'm doing like this is a great
+                    way to stay motivated. If I'm stuck on a programming task,
+                    working on a creative task is a great way to get some
+                    distance from it--when I come back to what I was doing, I
+                    often find myself coming up with solutions that had
+                    previously eluded me.
+                </p>
 
                 <h2>Shooting</h2>
 
                 <p>
                     I'd previously built an Asteroids clone in Unity, and I
-                    thought I would steal some of the functionality and adapt it
-                    for 3D.
+                    thought I would steal some of its shooting functionality and
+                    adapt it for 3D.
                 </p>
 
                 <p>
@@ -637,7 +646,7 @@ const Game = () => {
                     player's movement was drastically limited. I'll fix this in
                     a future build and possibly add a toggle for the effect in
                     an options menu, but for now you get a peek at the assets in
-                    unnaturally high resolution.
+                    dazzlingly high resolution.
                 </p>
 
                 <h2>Sound and Music</h2>
@@ -658,24 +667,24 @@ const Game = () => {
                 <p>
                     When it came time to actually put the sounds in the game, I
                     began with the enemy death sound and was puzzled as to why
-                    it wasn't working. I realized I'd chosen the trickiest
-                    situation as enemies delete their game object on death, so
-                    the audio source that started playing the death sound was
-                    immediately gone. I decided to attach the audio source to
-                    the enemy explosion particle system prefab, instead, which
-                    worked perfectly as the particle system deletes itself once
-                    it finishes playing (which is well after the sound
-                    finishes).
+                    it wasn't working. I realized the way I had set it up made a
+                    solution difficult: enemies delete their game object on
+                    death, so the audio source that started playing the death
+                    sound was gone as soon as the enemy was. I decided to attach
+                    the audio source to the enemy explosion particle system
+                    prefab, instead, which worked perfectly as the particle
+                    system deletes itself after it finishes playing (which is
+                    well after the sound finishes).
                 </p>
                 <p>
                     Adding sounds to the player for death and shooting was much
                     simpler, as the player object persists throughout the game,
-                    but I did add a feature that randomizes the volume of the
-                    shooting sound slightly to make it sound less repetitive.
-                    For the boost sound, I took a brief white noise sound with a
-                    natural fade-out and wrote a function to play it at a fixed
-                    interval while boosting, then played around with that
-                    interval until it sounded good.
+                    but I did add a function that randomizes the volume and
+                    pitch of the shooting sound slightly to make it sound less
+                    repetitive. For the boost sound, I took a brief white noise
+                    sound with a natural fade-out and wrote a function to play
+                    it at a fixed interval while boosting, then played around
+                    with that interval until it sounded good.
                 </p>
                 <p>
                     I made some original music in Ableton and in each scene
@@ -725,9 +734,22 @@ const Game = () => {
                     textures and effects going (fires? plumes of black smoke?
                     screams?) it should be pretty exciting.
                 </p>
+                <p>
+                    For a second level, I modified the scene for my first level.
+                    I felt if I was going to have a planet level, I should have
+                    a space level, and a little manipulation of the built-in
+                    procedural sky gave me a cool sort of sunset-in-low-orbit
+                    effect. I modeled some big torn-up space stations and upped
+                    the difficulty by using them to box in the player a little.
+                    To fake a night sky effect, I drew a tiny star texture and
+                    projected it as a hemisphere around the player using a
+                    particle system. The effect is a lot more realistic than a
+                    skybox would be unless I was using unreasonably large
+                    textures.
+                </p>
                 <h2>Deployment</h2>
                 <p>
-                    I decided to build the game to WebGL, which is very handy
+                    I decided to build the game for WebGL, which is very handy
                     for getting it onto somewhere like itch.io. Being able to
                     play the game with a click of a button is a huge time saver,
                     and it's also a lot more convenient for people to try out.
